@@ -237,3 +237,30 @@ function gameOver() {
     localStorage.setItem('player', JSON.stringify(player));
     location.href = '../gameover.html';
 }
+
+
+
+@media only screen and (max-width: 600px) {
+
+
+     function right() {
+    if (xPositionYellowBox >= 100) {
+        xPositionYellowBox = 10;
+        yellowBox.style.left = xPositionYellowBox + 'vw';
+        return
+    }
+    xPositionYellowBox += 10;
+    yellowBox.style.left = xPositionYellowBox + 'vw';
+}
+
+function left() {
+    if (xPositionYellowBox <= 0) {
+        xPositionYellowBox = 100;
+        yellowBox.style.left = xPositionYellowBox + 'vw';
+        return
+    }
+    xPositionYellowBox -= 10;
+    yellowBox.style.left = xPositionYellowBox + 'px';
+}
+
+}
